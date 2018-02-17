@@ -43,27 +43,37 @@ var myPlayList = [
 		imageUrl:"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
 	}
 
-]
+];
 
+var newPlaylist =[];
 
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
+	$("#coverArt").keyup(function(event) {
+        if (event.keyCode === 13) {
+            $("#addSong").click();
+        }
+    });
   
-displayList();
-
+	$("#addSong").click(function() {
+	  addSong(); 
+	});
+	// $("#displayPlaylist").click(function() {
+	//   displayNewPlaylist(); 
+	// });
 
 });
 
 function displayList(){
 	$("#addSong").click(function(){
 		for(var i = 0;i<myPlayList.length;i++){
-			$(".songsList").append("<div class = 'row'>" +
+			$(".songsList").append("<div class = 'row'> <div class='col-xs-12'>" +
 								"<p class='songTitle'>" +myPlayList[i].title + "</p>"+ 
 								"<p class='artist'>" + myPlayList[i].artist + "</p>" + 
 								"<p class='image'><img class='img-thumbnail' src='" + myPlayList[i].imageUrl + "'></p>" +
-								"<p class='url'><a href='" +  myPlayList[i].mp3Url + "'> Listen Now </a></p>"+
-								"</div>"
+								"<p class='url'><a target='_blank' href='" +  myPlayList[i].mp3Url + "'> Listen Now </a></p>"+
+								"</div></div>"
 								);
 		}
 	});
@@ -76,7 +86,21 @@ function clearList(){
 }
 
 function addSong(){
- 
-  
-  
+	var songTitle=$("#title").val();
+	var songArtist=$("#artist").val();
+	var coverArt=$("#coverArt").val();
+	newPlaylist.push({title:songTitle,
+					artist:songArtist,
+					image:coverArt,
+					},);
+	$("#title").val("");
+	$("#artist").val("");
+	$("#coverArt").val("");
+	$(".songsList").append("<div class = 'row'> <div class='col-xs-12'>" +
+							"<h3 class='songTitle'>" +newPlaylist[newPlaylist.length-1].title + "</h3>"+ 
+							"<h5 class='artist'>" + newPlaylist[newPlaylist.length-1].artist + "</h5>" + 
+							"<p class='image'><img class='img-thumbnail' src='" + newPlaylist[newPlaylist.length-1].image + "'></p>" +
+							"</div></div>");
+		
 }
+

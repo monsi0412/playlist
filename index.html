@@ -15,30 +15,68 @@
        <!-- Link script.js here -->
       <script src="js/script.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="icon" href="musicnote.png">
       
 
 
   </head>
 
   <body>
-    <div class="container text-center">
+    <div class="container-fluid text-center">
       <h1> My Playlist </h1>
-      
       <div class="input-group mb-3">
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"> 
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <input type="text" class="form-control" aria-label="Song Title" placeholder="Song Title" id="title"> <br><br>
+        <input type="text" class="form-control" aria-label="Song Artist" placeholder="Song Artist" id="artist">
+        <input type="text" class="form-control" aria-label="Cover Art" placeholder="Cover Art URL" id="coverArt">
       </div>
       
       <button type="button" class="btn btn-default" id="addSong"> Add Song </button>
-      <div class="songs row">
-        <div class="col-md-4">
-          
-        </div>
-        <div class="col-md-4 songsList" >
 
+      <div class="songs row">
+        <div class="col-md-6">
+          <h2>
+            My Top 5
+          </h2>
+            <div class = "row"> 
+              <div class="col-xs-12">
+  							<h3 class="songTitle">Castaway</h3>
+  							<h5 class="artist">5 Seconds of Summer</h5> 
+  							<p class="image"><img class="img-thumbnail" src="top5 artwork/sgfg.jpg"></p>
+  						</div>
+  					</div>
+  					<div class = "row"> 
+              <div class="col-xs-12">
+  							<h3 class="songTitle">Like Lovers Do</h3>
+  							<h5 class="artist">Hey Violet</h5> 
+  							<p class="image"><img class="img-thumbnail" src="top5 artwork/fto.jpg"></p>
+  						</div>
+  					</div>
+  					<div class = "row"> 
+              <div class="col-xs-12">
+  							<h3 class="songTitle">Daddy Issues</h3>
+  							<h5 class="artist">Demi Lovato</h5> 
+  							<p class="image"><img class="img-thumbnail" src="top5 artwork/tmylm.jpg"></p>
+  						</div>
+  					</div>
+  					<div class = "row"> 
+              <div class="col-xs-12">
+  							<h3 class="songTitle">Golden Days (live)</h3>
+  							<h5 class="artist">Panic! At The Disco</h5> 
+  							<p class="image"><img class="img-thumbnail" src="top5 artwork/amfwg.jpg"></p>
+  						</div>
+  					</div>
+  					<div class = "row"> 
+              <div class="col-xs-12">
+  							<h3 class="songTitle">No More Sad Songs</h3>
+  							<h5 class="artist">Little Mix</h5> 
+  							<p class="image"><img class="img-thumbnail" src="top5 artwork/glory days.png"></p>
+  						</div>
+  					</div>
         </div>
-        <div class="col-md-4">
-          
+        <div class="col-md-6 songsList" >
+          <h2>
+            More Songs:
+          </h2>
         </div>
       </div>  
       
