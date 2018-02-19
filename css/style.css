@@ -1,7 +1,29 @@
 body{
     text-align: center;
+    font-family: 'Poiret One', cursive;
+    overflow-x: hidden;
 }
 
 img{
     width:200px;
+    height:200px;
+}
+
+h2{
+    font-family: 'Megrim', cursive;
+    font-size:42px;
+}
+h1{
+    font-family: 'Megrim', cursive;
+    font-size:75px;
+}
+
+.inBetween{
+    width:12px;
+}
+.songDes{
+    width:200px;
+}
+.halfPage{
+    width:50%;
 }

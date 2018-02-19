@@ -1,86 +1,180 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-      <title>My Playlist</title>
-      
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <!-- Link style.css here -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
+<head>
+  <title>My Playlist</title>
 
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Link style.css here -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
-       <!-- Link script.js here -->
-      <script src="js/script.js"></script>
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="icon" href="musicnote.png">
-      
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Megrim|Poiret+One" rel="stylesheet">
+
+  <!-- Link script.js here -->
+  <script src="js/script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="musicnote.png">
 
 
-  </head>
+</head>
 
-  <body>
-    <div class="container-fluid text-center">
-      <h1> My Playlist </h1>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" aria-label="Song Title" placeholder="Song Title" id="title"> <br><br>
-        <input type="text" class="form-control" aria-label="Song Artist" placeholder="Song Artist" id="artist">
-        <input type="text" class="form-control" aria-label="Cover Art" placeholder="Cover Art URL" id="coverArt">
-      </div>
-      
-      <button type="button" class="btn btn-default" id="addSong"> Add Song </button>
-
-      <div class="songs row">
-        <div class="col-md-6">
-          <h2>
-            My Top 5
-          </h2>
-            <div class = "row"> 
-              <div class="col-xs-12">
-  							<h3 class="songTitle">Castaway</h3>
-  							<h5 class="artist">5 Seconds of Summer</h5> 
-  							<p class="image"><img class="img-thumbnail" src="top5 artwork/sgfg.jpg"></p>
-  						</div>
-  					</div>
-  					<div class = "row"> 
-              <div class="col-xs-12">
-  							<h3 class="songTitle">Like Lovers Do</h3>
-  							<h5 class="artist">Hey Violet</h5> 
-  							<p class="image"><img class="img-thumbnail" src="top5 artwork/fto.jpg"></p>
-  						</div>
-  					</div>
-  					<div class = "row"> 
-              <div class="col-xs-12">
-  							<h3 class="songTitle">Daddy Issues</h3>
-  							<h5 class="artist">Demi Lovato</h5> 
-  							<p class="image"><img class="img-thumbnail" src="top5 artwork/tmylm.jpg"></p>
-  						</div>
-  					</div>
-  					<div class = "row"> 
-              <div class="col-xs-12">
-  							<h3 class="songTitle">Golden Days (live)</h3>
-  							<h5 class="artist">Panic! At The Disco</h5> 
-  							<p class="image"><img class="img-thumbnail" src="top5 artwork/amfwg.jpg"></p>
-  						</div>
-  					</div>
-  					<div class = "row"> 
-              <div class="col-xs-12">
-  							<h3 class="songTitle">No More Sad Songs</h3>
-  							<h5 class="artist">Little Mix</h5> 
-  							<p class="image"><img class="img-thumbnail" src="top5 artwork/glory days.png"></p>
-  						</div>
-  					</div>
-        </div>
-        <div class="col-md-6 songsList" >
-          <h2>
-            More Songs:
-          </h2>
-        </div>
-      </div>  
-      
+<body>
+  <div class="container text-center">
+    <h1> My Playlist </h1>
+    <div class="input-group mb-3 ml-1">
+      <input type="text" class="form-control" aria-label="Song Title" placeholder="Song Title" id="title">
+      <input type="text" class="form-control" aria-label="Song Artist" placeholder="Song Artist" id="artist">
+      <input type="text" class="form-control" aria-label="Song Length" placeholder="Song Length" id="songLength">
+      <input type="text" class="form-control" aria-label="Cover Art" placeholder="Cover Art URL" id="coverArt">
     </div>
-  </body>
+
+    <button type="button" class="btn btn-default" id="addSong"> Add Song </button>
+
+    <div class="songs row">
+      <div class="col-md-6 halfPage">
+
+        <h2>
+          My Top 5
+        </h2>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5 songDes">
+                <h3 class="songTitle">Castaway</h3>
+                <h5 class="artist">5 Seconds of Summer</h5>
+                <h7 class="length">3:34</h7>
+              </div>
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5">
+                <p class="image"><img class="img-thumbnail" src="top5 artwork/sgfg.jpg"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5 songDes">
+                <h3 class="songTitle">Like Lovers Do</h3>
+                <h5 class="artist">Hey Violet</h5>
+                <h7 class="length">3:06</h7>
+              </div>
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5">
+                <p class="image"><img class="img-thumbnail" src="top5 artwork/fto.jpg"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5 songDes">
+                <h3 class="songTitle">Daddy Issues</h3>
+                <h5 class="artist">Demi Lovato</h5>
+                <h7 class="length">3:09</h7>
+              </div>
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5">
+                <p class="image"><img class="img-thumbnail" src="top5 artwork/tmylm.jpg"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5 songDes">
+                <h3 class="songTitle">Golden Days (live)</h3>
+                <h5 class="artist">Panic! At The Disco</h5>
+                <h7 class="length">4:15</h7>
+              </div>
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5">
+                <p class="image"><img class="img-thumbnail" src="top5 artwork/amfwg.jpg"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5 songDes">
+                <h3 class="songTitle">No More Sad Songs</h3>
+                <h5 class="artist">Little Mix</h5>
+                <h7 class="length">3:26</h7>
+              </div>
+              <div class="col-xs-1 inBetween"></div>
+              <div class="col-xs-5">
+                <p class="image"><img class="img-thumbnail" src="top5 artwork/glory days.png"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-6 songsList halfPage">
+        <h2>
+          More Songs:
+        </h2>
+      </div>
+    </div>
+
+  </div>
+
+
+
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script>
+  window.onSpotifyWebPlaybackSDKReady = () => {
+    const token = '[My Spotify Web API access token]';
+    const player = new Spotify.Player({
+      name: 'Web Playback SDK Quick Start Player',
+      getOAuthToken: cb => { cb(token); }
+    });
+
+    // Error handling
+    player.on('initialization_error', e => { console.error(e); });
+    player.on('authentication_error', e => { console.error(e); });
+    player.on('account_error', e => { console.error(e); });
+    player.on('playback_error', e => { console.error(e); });
+
+    // Playback status updates
+    player.on('player_state_changed', state => { console.log(state); });
+
+    // Ready
+    player.on('ready', data => {
+      let { device_id } = data;
+      console.log('Ready with Device ID', device_id);
+    });
+
+    // Connect to the player!
+    player.connect();
+  }
+  </script>
+
+
+
+</body>
 
 </html>
