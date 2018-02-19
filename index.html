@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <div class="container text-center">
+  <div class="container-fluid text-center">
     <h1> My Playlist </h1>
     <div class="input-group mb-3 ml-1">
       <input type="text" class="form-control" aria-label="Song Title" placeholder="Song Title" id="title">
@@ -144,34 +144,34 @@
 
 
 
-<script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script>
-  window.onSpotifyWebPlaybackSDKReady = () => {
-    const token = '[My Spotify Web API access token]';
-    const player = new Spotify.Player({
-      name: 'Web Playback SDK Quick Start Player',
-      getOAuthToken: cb => { cb(token); }
-    });
+<!--<script src="https://sdk.scdn.co/spotify-player.js"></script>-->
+<!--  <script>-->
+<!--  window.onSpotifyWebPlaybackSDKReady = () => {-->
+<!--    const token = '[My Spotify Web API access token]';-->
+<!--    const player = new Spotify.Player({-->
+<!--      name: 'Web Playback SDK Quick Start Player',-->
+<!--      getOAuthToken: cb => { cb(token); }-->
+<!--    });-->
 
     // Error handling
-    player.on('initialization_error', e => { console.error(e); });
-    player.on('authentication_error', e => { console.error(e); });
-    player.on('account_error', e => { console.error(e); });
-    player.on('playback_error', e => { console.error(e); });
+<!--    player.on('initialization_error', e => { console.error(e); });-->
+<!--    player.on('authentication_error', e => { console.error(e); });-->
+<!--    player.on('account_error', e => { console.error(e); });-->
+<!--    player.on('playback_error', e => { console.error(e); });-->
 
     // Playback status updates
-    player.on('player_state_changed', state => { console.log(state); });
+<!--    player.on('player_state_changed', state => { console.log(state); });-->
 
     // Ready
-    player.on('ready', data => {
-      let { device_id } = data;
-      console.log('Ready with Device ID', device_id);
-    });
+<!--    player.on('ready', data => {-->
+<!--      let { device_id } = data;-->
+<!--      console.log('Ready with Device ID', device_id);-->
+<!--    });-->
 
     // Connect to the player!
-    player.connect();
-  }
-  </script>
+<!--    player.connect();-->
+<!--  }-->
+<!--  </script>-->
 
 
 

@@ -3,7 +3,9 @@ body{
     font-family: 'Poiret One', cursive;
     overflow-x: hidden;
 }
-
+#addSong{
+    font-size:20px;
+}
 img{
     width:200px;
     height:200px;
@@ -11,11 +13,20 @@ img{
 
 h2{
     font-family: 'Megrim', cursive;
-    font-size:42px;
+    font-size:54px;
 }
 h1{
     font-family: 'Megrim', cursive;
-    font-size:75px;
+    font-size:85px;
+}
+h3{
+    font-size:36px;
+}
+h5{
+    font-size:24px;
+}
+h7{
+    font-size:16px;
 }
 
 .inBetween{
