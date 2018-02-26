@@ -54,6 +54,11 @@ $(document).ready(function() {
 			$("#addSong").click();
 		}
 	});
+	$("#songUrl").keyup(function(event) {
+		if (event.keyCode === 13) {
+			$("#addSong").click();
+		}
+	});
 
 	$("#addSong").click(function() {
 		addSong();
@@ -61,6 +66,10 @@ $(document).ready(function() {
 	// $("#displayPlaylist").click(function() {
 	//   displayNewPlaylist(); 
 	// });
+
+	$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
 });
 
@@ -90,30 +99,51 @@ function addSong() {
 	var songArtist = $("#artist").val();
 	var coverArt = $("#coverArt").val();
 	var songLength = $("#songLength").val();
+	var songUrl = $("#songUrl").val();
+	if(coverArt==="" && songTitle === "" && songArtist === ""){
+		alert("Invalid Input");
+		return null;
+	}
+	if(coverArt===""){
+		coverArt = "top5 artwork/unknown.png";
+	}
+	if(songTitle===""){
+		songTitle = "Unknown Track";
+	}
+	if(songArtist===""){
+		songArtist = "Unknown Artist";
+	}
+	
 	newPlaylist.push({
 		title: songTitle,
 		artist: songArtist,
 		image: coverArt,
 		songLength: songLength,
+		url: songUrl,
 	}, );
 	$("#title").val("");
 	$("#artist").val("");
 	$("#coverArt").val("");
-	$(".songsList").append("<div class='row'> <div class='col-xs-12'> <div class='row'> <div class='col-xs-1 inBetween'></div> <div class='col-xs-5 songDes'>" + 
-							"<h3 class='songTitle'>" + newPlaylist[newPlaylist.length - 1].title + "</h3>" +
-							"<h5 class='artist'>" + newPlaylist[newPlaylist.length - 1].artist + "</h5>" + 
-							"<h7 class='length'>" + newPlaylist[newPlaylist.length - 1].songLength + "</h7" +
-							"</div> <div class='col-xs-1 inBetween'></div> <div class='col-xs-5'>" +
-							"<p class='image'><img class='img-thumbnail' src='" + newPlaylist[newPlaylist.length - 1].image + "'></p>"+
-							" </div> </div> </div> </div>");
+	$("#songLength").val("");
+	$("#songUrl").val("");
+	$(".songsList").append(  "<div class='col-xs-12'>" +
+					            "<div class='row'>" +
+					              "<div class='col-xs-1 inBetween'></div>" +
+					              "<div class='col-xs-5 songDes'>" +
+					                "<h3 class='songTitle'>"+ newPlaylist[newPlaylist.length - 1].title +"</h3>" +
+					                "<h5 class='artist'>" + newPlaylist[newPlaylist.length - 1].artist + "</h5>" +
+					                "<h7 class='length'>" + newPlaylist[newPlaylist.length - 1].songLength + "</h7>"+
+					              "</div>" +
+					              "<div class='col-xs-1 inBetween'></div>" +
+					              "<div class='col-xs-5'>" +
+					                "<p class='image'>" +
+					                  "<a target='_blank' href='" + newPlaylist[newPlaylist.length - 1].url + 
+					                	"' data-toggle='tooltip' ><img class='img-thumbnail' src='" + newPlaylist[newPlaylist.length - 1].image + "'></a>"+
+					                "</p>" +
+					              "</div>" +
+					            "</div>" +
+					          "</div>" +
+					        "</div>");
 
 }
 
-
-
-
-// "<div class = 'row'> <div class='col-xs-12'>" +
-// 							"<h3 class='songTitle'>" +newPlaylist[newPlaylist.length-1].title + "</h3>"+ 
-// 							"<h5 class='artist'>" + newPlaylist[newPlaylist.length-1].artist + "</h5>" + 
-// 							"<p class='image'><img class='img-thumbnail' src='" + newPlaylist[newPlaylist.length-1].image + "'></p>" +
-// 							"</div></div>"

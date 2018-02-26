@@ -16,29 +16,40 @@
   <!-- Link script.js here -->
   <script src="js/script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="musicnote.png">
+  <link rel="icon" href="headphones2.png">
 
 
 </head>
 
 <body>
   <div class="container-fluid text-center">
+    
+    
     <h1> My Playlist </h1>
-    <div class="input-group mb-3 ml-1">
+    
+    
+    
+    
+    <div class="input-group mb-3" id="topRow">
       <input type="text" class="form-control" aria-label="Song Title" placeholder="Song Title" id="title">
       <input type="text" class="form-control" aria-label="Song Artist" placeholder="Song Artist" id="artist">
-      <input type="text" class="form-control" aria-label="Song Length" placeholder="Song Length" id="songLength">
-      <input type="text" class="form-control" aria-label="Cover Art" placeholder="Cover Art URL" id="coverArt">
+      <input type="text" class="form-control" aria-label="Song Length" placeholder="Song Length (0:00)" id="songLength">
     </div>
-
+    <div class="input-group mb-3" id="secondRow">
+      <input type="text" class="form-control" aria-label="Cover Art" placeholder="Cover Art URL" id="coverArt">
+      <input type="text" class="form-control" aria-label="Song URL" placeholder="Song URL (optional)" id="songUrl">
+    </div>
     <button type="button" class="btn btn-default" id="addSong"> Add Song </button>
-
+    
+    
     <div class="songs row">
       <div class="col-md-6 halfPage">
 
         <h2>
           My Top 5
         </h2>
+
+
         <div class="row">
           <div class="col-xs-12">
             <div class="row">
@@ -50,7 +61,9 @@
               </div>
               <div class="col-xs-1 inBetween"></div>
               <div class="col-xs-5">
-                <p class="image"><img class="img-thumbnail" src="top5 artwork/sgfg.jpg"></p>
+                <p class="image">
+                  <a target="_blank" href="https://open.spotify.com/track/0Lz17st4A5INY3ZESQhFNK" data-toggle="tooltip" ><img class="img-thumbnail" src="top5 artwork/sgfg.jpg"></a>
+                </p>
               </div>
             </div>
           </div>
@@ -68,7 +81,9 @@
               </div>
               <div class="col-xs-1 inBetween"></div>
               <div class="col-xs-5">
-                <p class="image"><img class="img-thumbnail" src="top5 artwork/fto.jpg"></p>
+                <p class="image">
+                  <a target="_blank" href="https://open.spotify.com/track/1xToKQU0oWjpHE1GJiozHv"><img class="img-thumbnail" src="top5 artwork/fto.jpg"></a>
+                </p>
               </div>
             </div>
           </div>
@@ -86,12 +101,13 @@
               </div>
               <div class="col-xs-1 inBetween"></div>
               <div class="col-xs-5">
-                <p class="image"><img class="img-thumbnail" src="top5 artwork/tmylm.jpg"></p>
+                <p class="image">
+                  <a target="_blank" href="https://open.spotify.com/track/2XPgaQh0cw1wR3js5dKI4M"><img class="img-thumbnail" src="top5 artwork/tmylm.jpg"></a>
+                </p>
               </div>
             </div>
           </div>
         </div>
-
 
 
         <div class="row">
@@ -105,12 +121,13 @@
               </div>
               <div class="col-xs-1 inBetween"></div>
               <div class="col-xs-5">
-                <p class="image"><img class="img-thumbnail" src="top5 artwork/amfwg.jpg"></p>
+                <p class="image">
+                  <a target="_blank" href="https://open.spotify.com/track/02d3MXxsO0AP3DsoJGOaIt"><img class="img-thumbnail" src="top5 artwork/amfwg.jpg"></a>
+                </p>
               </div>
             </div>
           </div>
         </div>
-
 
 
         <div class="row">
@@ -124,13 +141,21 @@
               </div>
               <div class="col-xs-1 inBetween"></div>
               <div class="col-xs-5">
-                <p class="image"><img class="img-thumbnail" src="top5 artwork/glory days.png"></p>
+                <p class="image">
+                  <a target="_blank" href="https://open.spotify.com/track/50HW2kKK3QWgKaih2KEHEH"><img class="img-thumbnail" src="top5 artwork/glory days.png"></a>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="tooltip bs-tooltip-top" role="tooltip">
+        <div class="arrow"></div>
+        <div class="tooltip-inner">
+          Open in Spotify
+        </div>
+      </div>
 
 
       <div class="col-md-6 songsList halfPage">
@@ -138,40 +163,41 @@
           More Songs:
         </h2>
       </div>
+
     </div>
 
   </div>
 
 
 
-<!--<script src="https://sdk.scdn.co/spotify-player.js"></script>-->
-<!--  <script>-->
-<!--  window.onSpotifyWebPlaybackSDKReady = () => {-->
-<!--    const token = '[My Spotify Web API access token]';-->
-<!--    const player = new Spotify.Player({-->
-<!--      name: 'Web Playback SDK Quick Start Player',-->
-<!--      getOAuthToken: cb => { cb(token); }-->
-<!--    });-->
+  <!--<script src="https://sdk.scdn.co/spotify-player.js"></script>-->
+  <!--  <script>-->
+  <!--  window.onSpotifyWebPlaybackSDKReady = () => {-->
+  <!--    const token = '[My Spotify Web API access token]';-->
+  <!--    const player = new Spotify.Player({-->
+  <!--      name: 'Web Playback SDK Quick Start Player',-->
+  <!--      getOAuthToken: cb => { cb(token); }-->
+  <!--    });-->
 
-    <!--// Error handling-->
-<!--    player.on('initialization_error', e => { console.error(e); });-->
-<!--    player.on('authentication_error', e => { console.error(e); });-->
-<!--    player.on('account_error', e => { console.error(e); });-->
-<!--    player.on('playback_error', e => { console.error(e); });-->
+  <!--// Error handling-->
+  <!--    player.on('initialization_error', e => { console.error(e); });-->
+  <!--    player.on('authentication_error', e => { console.error(e); });-->
+  <!--    player.on('account_error', e => { console.error(e); });-->
+  <!--    player.on('playback_error', e => { console.error(e); });-->
 
-    <!--// Playback status updates-->
-<!--    player.on('player_state_changed', state => { console.log(state); });-->
+  <!--// Playback status updates-->
+  <!--    player.on('player_state_changed', state => { console.log(state); });-->
 
-    <!--// Ready-->
-<!--    player.on('ready', data => {-->
-<!--      let { device_id } = data;-->
-<!--      console.log('Ready with Device ID', device_id);-->
-<!--    });-->
+  <!--// Ready-->
+  <!--    player.on('ready', data => {-->
+  <!--      let { device_id } = data;-->
+  <!--      console.log('Ready with Device ID', device_id);-->
+  <!--    });-->
 
-    <!--// Connect to the player!-->
-<!--    player.connect();-->
-<!--  }-->
-<!--  </script>-->
+  <!--// Connect to the player!-->
+  <!--    player.connect();-->
+  <!--  }-->
+  <!--  </script>-->
 
 
 

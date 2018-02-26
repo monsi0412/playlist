@@ -2,9 +2,31 @@ body{
     text-align: center;
     font-family: 'Poiret One', cursive;
     overflow-x: hidden;
+    background-image:url("background.png");
+    background-repeat: no-repeat;
 }
 #addSong{
     font-size:20px;
+    color:#af0040;
+    border-color: black;
+    background-color: white;
+    
+        display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    transition-duration: 0.3s;
+    transition-property: transform
+}
+
+#addSong:hover{
+    transform: translateY(-5px);
+}
+    
+.form-control{
+    border-color:black;
+    color:#af0040;
 }
 img{
     width:200px;
@@ -14,13 +36,16 @@ img{
 h2{
     font-family: 'Megrim', cursive;
     font-size:54px;
+    
 }
 h1{
     font-family: 'Megrim', cursive;
-    font-size:85px;
+    font-size:90px;
+    color:#af0040;
 }
 h3{
     font-size:36px;
+    
 }
 h5{
     font-size:24px;
@@ -38,3 +63,12 @@ h7{
 /*.halfPage{*/
 /*    width:50%;*/
 /*}*/
+
+.img-thumbnail{
+    background:#3a3a3a;
+    border:0.5px solid black;
+}
+
+::placeholder{
+    color:black;
+}
