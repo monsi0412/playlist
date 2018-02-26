@@ -126,24 +126,48 @@ function addSong() {
 	$("#coverArt").val("");
 	$("#songLength").val("");
 	$("#songUrl").val("");
-	$(".songsList").append(  "<div class='col-xs-12'>" +
-					            "<div class='row'>" +
-					              "<div class='col-xs-1 inBetween'></div>" +
-					              "<div class='col-xs-5 songDes'>" +
-					                "<h3 class='songTitle'>"+ newPlaylist[newPlaylist.length - 1].title +"</h3>" +
-					                "<h5 class='artist'>" + newPlaylist[newPlaylist.length - 1].artist + "</h5>" +
-					                "<h7 class='length'>" + newPlaylist[newPlaylist.length - 1].songLength + "</h7>"+
-					              "</div>" +
-					              "<div class='col-xs-1 inBetween'></div>" +
-					              "<div class='col-xs-5'>" +
-					                "<p class='image'>" +
-					                  "<a target='_blank' href='" + newPlaylist[newPlaylist.length - 1].url + 
-					                	"' data-toggle='tooltip' ><img class='img-thumbnail' src='" + newPlaylist[newPlaylist.length - 1].image + "'></a>"+
-					                "</p>" +
-					              "</div>" +
-					            "</div>" +
-					          "</div>" +
-					        "</div>");
+
+	if(songUrl===""){
+		$(".songsList").append( `<div class='row'>
+								<div class='col-xs-12'>   
+					             <div class='row' style='margin:0 auto;'>   
+					               <div class='col-xs-1 inBetween'></div>   
+					               <div class='col-xs-5 songDes'>   
+					                 <h3 class='songTitle'>   ${newPlaylist[newPlaylist.length - 1].title }  </h3>   
+					                 <h5 class='artist'>    ${newPlaylist[newPlaylist.length - 1].artist}    </h5>   
+					                 <h7 class='length'>    ${newPlaylist[newPlaylist.length - 1].songLength}    </h7>  
+					               </div>   
+					               <div class='col-xs-1 inBetween'></div>   
+					               <div class='col-xs-5'>   
+					                 <p class='image'>   
+					                	 <img class='img-thumbnail' src='    ${newPlaylist[newPlaylist.length - 1].image}    '>
+					                 </p>   
+					               </div>   
+					             </div>   
+					           </div>   
+					         </div> `);
+	}
+	else{
+		$(".songsList").append( `<div class='row'>
+								<div class='col-xs-12'>   
+					             <div class='row' style='margin:0 auto;'>   
+					               <div class='col-xs-1 inBetween'></div>   
+					               <div class='col-xs-5 songDes'>   
+					                 <h3 class='songTitle'>   ${newPlaylist[newPlaylist.length - 1].title }  </h3>   
+					                 <h5 class='artist'>    ${newPlaylist[newPlaylist.length - 1].artist}    </h5>   
+					                 <h7 class='length'>    ${newPlaylist[newPlaylist.length - 1].songLength}    </h7>  
+					               </div>   
+					               <div class='col-xs-1 inBetween'></div>   
+					               <div class='col-xs-5'>   
+					                 <p class='image'>   
+					                   <a target='_blank' href='    ${newPlaylist[newPlaylist.length - 1].url}   
+					                	 '><img class='img-thumbnail' src='    ${newPlaylist[newPlaylist.length - 1].image}    '></a>  
+					                 </p>   
+					               </div>   
+					             </div>   
+					           </div>   
+					         </div> `);
+	}
 
 }
 
