@@ -2,8 +2,8 @@ body{
     text-align: center;
     font-family: 'Poiret One', cursive;
     overflow-x: hidden;
-    /*background-image:url("../background.png");*/
-    /*background-position:center;*/
+    background-image:url("../back.png");
+
 }
 #addSong{
     font-size:20px;
