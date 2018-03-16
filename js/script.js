@@ -51,9 +51,7 @@ function addSong() {
 					                 <h3 class='songTitle'>   ${newPlaylist[newPlaylist.length - 1].title }  </h3>   
 					                 <h5 class='artist'>    ${newPlaylist[newPlaylist.length - 1].artist}    </h5>   
 					                 <h7 class='length'>    ${newPlaylist[newPlaylist.length - 1].songLength}    </h7>
-					                 <p>
-                						<button type='button' class='btn btn-default remove'> Delete Song </button>
-                					</p>
+
 					               </div>   
 					               <div class='col-xs-1 inBetween'></div>   
 					               <div class='col-xs-5'>   
@@ -74,9 +72,7 @@ function addSong() {
 					                 <h3 class='songTitle'>   ${newPlaylist[newPlaylist.length - 1].title }  </h3>   
 					                 <h5 class='artist'>    ${newPlaylist[newPlaylist.length - 1].artist}    </h5>   
 					                 <h7 class='length'>    ${newPlaylist[newPlaylist.length - 1].songLength}    </h7> 
-					                 <p>
-                						<button type='button' class='btn btn-default' id='remove'> Delete Song </button>
-                					</p>
+
 					               </div>   
 					               <div class='col-xs-1 inBetween'></div>   
 					               <div class='col-xs-5'>   
